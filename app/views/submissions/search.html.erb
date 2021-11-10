@@ -1,0 +1,34 @@
+<main>
+ <div class="search-form">
+  <%= form_with url:submissions_search_path, method: :get, local: true do |f| %>
+    <%= f.text_field :submission_comment, :size=>"100" %>
+    <%= f.submit "検索" %>
+  <% end %>
+ </div>
+
+ <div class="container2">
+   <% @submissions.each do |submission| %>
+   <tr>
+     <td><%= attachment_image_tag submission.user, :image, size: "100x100", class:"icon",fallback: "virender-singh-hE0nmTffKtM-unsplash.jpg" %></td>
+     <td><%= link_to user_path(submission.user_id) do %>
+     <%= submission.user.nick_name %>
+     <% end %></td>
+     <td><%= submission.created_at.strftime('%Y/%m/%d') %></td>
+   </tr>
+  </div>
+ </div>
+ <div class="container">
+   <%= link_to submission_path(submission.id) do %>
+   <% submission.submission_images.each do |image| %>
+   <%= attachment_image_tag image, :image, size: "400x400" %>
+   <% end %>
+   <% end %>
+  </div>
+ <div class="container">
+    <%= link_to submission_path(submission.id) do %>
+    <%= submission.submission_comment %>
+    <% end %>
+  </div>
+    <% end %>
+ </div>
+</main>

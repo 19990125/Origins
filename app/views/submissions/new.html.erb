@@ -1,0 +1,19 @@
+<main>
+ <div class="container">
+  <div class="row">
+   <%= form_with model:@submission, local:true do |f| %>
+   <div class="form-group">
+    <%= f.label :写真選択 %>
+    <%= f.attachment_field :submission_images_images, multiple: true %>
+   </div>
+
+   <div class="form-group">
+    <%= f.label :コメント %>
+    <%= f.text_field :submission_comment %></div>
+
+   <div class="form-group">
+    <%= f.submit :"新規投稿",class: "submit" %></div>
+    <% end %>
+  </div>
+ </div>
+</main>

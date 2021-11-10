@@ -1,0 +1,78 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user_edit {
+   .danger {
+    color: white;
+    background-color: red;
+    }
+
+.edit {
+    color: white;
+    background-color: green;
+    }
+
+.row {
+    display: flex;
+    justify-content: center;
+    }
+}
+
+
+
+.users_show{
+  .row3 {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+    }
+
+.icon {
+    width: 200px;
+    height: 200px;
+    padding-right: 200px;
+}
+
+.follow {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+
+.releasebtn {
+    background-color: red;
+    color: black;
+}
+
+.followbtn {
+  background-color: aqua;
+  color: black;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.list {
+    display: flex;
+    align-items: flex-end;
+}
+
+.name {
+    display: flex;
+    padding-right: 150px;
+}
+
+.row2 {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    }
+
+.new_post {
+    padding-left: 30px;
+ }
+
+}

@@ -1,0 +1,55 @@
+// Place all the styles related to the relationships controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.relationships_followings{
+
+  .title {
+   display: flex;
+   justify-content: center;
+  }
+
+  .nouser {
+    display: flex;
+    justify-content: center;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon {
+    padding-right: 50px;
+  }
+}
+
+
+.relationships_followers{
+
+  .title {
+   display: flex;
+   justify-content: center;
+  }
+
+  .nouser {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: start;
+    padding-bottom: 30px;
+  }
+
+  .introduction {
+    display: flex;
+    justify-content: start;
+    padding-bottom: 30px;
+  }
+
+  .icon {
+    padding-right: 50px;
+  }
+}

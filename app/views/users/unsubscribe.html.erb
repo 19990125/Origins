@@ -1,0 +1,20 @@
+<main>
+ <p id="notice"></p>
+  <div class="container">
+   <div class="row">
+    <h3>本当に退会しますか？</h3>
+   </div>
+    <div class="row">
+     <tr>
+      <h5>※一度退会してしまうと、データは残りませんので<br>ご注意ください。</h5>
+     </tr>
+    </div>
+
+     <div class="row">
+      <tr>
+       <%= button_to "はい", homes_top_path, class:"btn btn-info btn-sm", method: :delete, data: {comfirm: "Are you sure?"} %>
+       <%= button_to "いいえ", user_path(current_user.id), class:"btn btn-info btn-sm", method: :delete, data: {comfirm: "Are you sure?"} %>
+      </tr>
+     </div>
+  </div>
+</main>

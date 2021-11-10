@@ -1,0 +1,67 @@
+// Place all the styles related to the submissions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+
+.submissions_new{
+
+  input[type="text"] {
+  width: 500px;
+  height: 150px;
+    }
+
+  .submit {
+  background-color: green;
+  color: white;
+  }
+
+.form-group {
+  padding-top: 30px;
+  padding-left: 90px;
+ }
+
+}
+
+
+.submissions_index{
+
+  .container2 {
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
+.submissions_search{
+
+  input[type="text"] {
+  width: 500px;
+    }
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+    }
+
+}
+
+
+.submissions_show {
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  local {
+  padding-bottom: 40px;
+  }
+}

@@ -1,0 +1,25 @@
+<main>
+ <div class="container">
+  <div class="row">
+   <% @submissions.each do |submission| %>
+     <%= attachment_image_tag submission.user, :image, width: "300", class:"icon" %>
+     <%= link_to user_path(submission.user_id) do %>
+     <%= submission.user.nick_name %>
+     <% end %>
+     <%= submission.created_at.strftime('%Y/%m/%d') %>
+  </div>
+  <div class="row">
+   <%= link_to submission_path(submission.id) do %>
+   <% submission.submission_images.each do |image| %>
+   <%= attachment_image_tag image, :image, width: "300" %>
+   <% end %>
+   <% end %>
+  </div>
+  <div class="row">
+    <%= link_to submission_path(submission.id) do %>
+    <%= submission.submission_comment %>
+    <% end %>
+  </div>
+    <% end %>
+ </div>
+</main>
