@@ -4,12 +4,14 @@ Rails.application.routes.draw do
  get 'homes/top' => "homes#top"
  get 'submissions/search' => "submissions#search"
  get 'submissions/new' => "submissions#new"
- resources :submissions,only: [:index,:show,:create,:destroy]
+ resources :submissions,only: [:index,:show,:create,:destroy] do
+  resources :favorites,only: [:index,:create,:destroy]
+ end
  get 'users/unsubscribe' => "users#unsubscribe"
  resources :users,only: [:show,:edit,:destroy,:update] do
+  get 'submissions' => 'favorites#index'
    resources :relationships,only: [:create,:destroy]
    get 'followings' => 'relationships#followings', as: 'followings'
    get 'followers' => 'relationships#followers', as: 'followers'
-   resources :favorites,only: [:index,:create,:destroy]
  end
 end

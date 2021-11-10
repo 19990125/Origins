@@ -20,7 +20,7 @@
        <li class="item1"><%= link_to 'プロフィール', user_path(current_user.id),class:"link" %></li>
        <li class="item2"><%= link_to '投稿一覧', submissions_path,class:"link" %></li>
        <li class="item3"><%= link_to '投稿検索', submissions_search_path,class:"link" %></li>
-       <li class="item4"><%= link_to 'いいね', user_favorites_path(current_user.id),class:"link" %></li>
+       <li class="item4"><%= link_to 'いいね', user_submissions_path(current_user.id),class:"link" %></li>
        <li class="item5"><%= link_to 'ログアウト', destroy_user_session_path,method: :delete,class:"link" %></li>
       </ul>
     </div>

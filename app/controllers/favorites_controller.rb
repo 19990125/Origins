@@ -1,14 +1,14 @@
 class FavoritesController < ApplicationController
 
  def create
-    submission = Submission.find(params[:format])
+    submission = Submission.find(params[:submission_id])
     favorite = current_user.favorites.new(submission_id: submission.id)
     favorite.save
     redirect_to submission_path(current_user.id)
  end
 
  def destroy
-    submission = Submission.find(params[:format])
+    submission = Submission.find(params[:submission_id])
     favorite = current_user.favorites.find_by(submission_id: submission.id)
     favorite.destroy
     redirect_to submission_path(current_user.id)

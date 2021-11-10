@@ -16,12 +16,12 @@
      <%= @submission.user.nick_name %>
      <% end %></td>
      <% if @submission.favorited_by?(current_user) %>
-     <td><%= link_to user_favorite_path(@submission.user.id), method: :delete do %>
+     <td><%= link_to submission_favorite_path(@submission.id), method: :delete do %>
      ♥<%= @submission.favorites.count %> いいね
      <% end %>
      </td>
      <% else %>
-     <td><%= link_to user_favorites_path(@submission.user.id), method: :post do %>
+     <td><%= link_to submission_favorites_path(@submission.id), method: :post do %>
      ♡<%= @submission.favorites.count %> いいね
      <% end %>
      </td>
@@ -39,9 +39,7 @@
  </div>
  <div class="container">
   <div class="row">
-    <%= link_to submission_path(@submission.id) do %>
-    <%= @submission.submission_comment %>
-    <% end %>
+   <%= @submission.submission_comment %>
   </div>
  </div>
  <div class="container">

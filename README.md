@@ -1,24 +1,37 @@
-# README
+# オリジンズ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
 
-Things you may want to cover:
+個々の世界観をコメント付きの写真で投稿したり、実際に制作する上で困りごとがあればコメント機能を使いお気軽に質問し交友を深めることもできる写真投稿サイト
 
-* Ruby version
+### サイトテーマ
 
-* System dependencies
+ミニチュア系の写真投稿サイト
 
-* Configuration
+### テーマを選んだ理由
 
-* Database creation
+実際に自分で製作するとなると「ここのところ再現できるのかな？」等、何かしらの壁にぶち当たったときにプロの人などを参考にしたり、何時間何十時間かけて作った作品をみんなで共有したいと思ったからです。
 
-* Database initialization
+### ターゲットユーザ
 
-* How to run the test suite
+ミニチュア（ドールハウス）愛好家、プロの人、趣味で作っている人、まだ作ったことがない初心者の人等
 
-* Services (job queues, cache servers, search engines, etc.)
+### 主な利用シーン
 
-* Deployment instructions
+実際に作ってる時や新たなデザインを求めてるとき等
 
-* ...
+## 設計書
+
+## チャレンジ要素一覧
+
+https://docs.google.com/spreadsheets/d/11b6xDXdN5yCPBM7l-mHKGuMm26pkVjdd98aIzrKfIi8/edit#gid=0
+
+## 開発環境
+
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JS ライブラリ：jQuery
+- IDE：Cloud9
+
+## 使用素材
