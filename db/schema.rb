@@ -10,53 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_01_121410) do
-
-  create_table "favorites", force: :cascade do |t|
-    t.integer "submission_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+ActiveRecord::Schema.define(version: 20_211_101_121_410) do
+  create_table 'favorites', force: :cascade do |t|
+    t.integer 'submission_id'
+    t.integer 'user_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "relationships", force: :cascade do |t|
-    t.integer "follower_id"
-    t.integer "followed_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'relationships', force: :cascade do |t|
+    t.integer 'follower_id'
+    t.integer 'followed_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "submission_images", force: :cascade do |t|
-    t.integer "submission_id"
-    t.string "image_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["submission_id"], name: "index_submission_images_on_submission_id"
+  create_table 'submission_images', force: :cascade do |t|
+    t.integer 'submission_id'
+    t.string 'image_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['submission_id'], name: 'index_submission_images_on_submission_id'
   end
 
-  create_table "submissions", force: :cascade do |t|
-    t.string "submission_title"
-    t.integer "user_id"
-    t.string "submission_thumbnail"
-    t.string "submission_image"
-    t.string "submission_comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'submissions', force: :cascade do |t|
+    t.string 'submission_title'
+    t.integer 'user_id'
+    t.string 'submission_thumbnail'
+    t.string 'submission_image'
+    t.string 'submission_comment'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "nick_name"
-    t.string "image_id"
-    t.text "introduction"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  create_table 'users', force: :cascade do |t|
+    t.string 'nick_name'
+    t.string 'image_id'
+    t.text 'introduction'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.string 'email', default: '', null: false
+    t.string 'encrypted_password', default: '', null: false
+    t.string 'reset_password_token'
+    t.datetime 'reset_password_sent_at'
+    t.datetime 'remember_created_at'
+    t.index ['email'], name: 'index_users_on_email', unique: true
+    t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
   end
-
 end

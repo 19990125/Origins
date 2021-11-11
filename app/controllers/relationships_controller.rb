@@ -1,29 +1,27 @@
 class RelationshipsController < ApplicationController
-
- def create
+  def create
     current_user.follow(params[:user_id])
     redirect_to user_path(current_user)
+  end
 
- end
-
- def destroy
+  def destroy
     current_user.unfollow(params[:user_id])
     redirect_to user_path(current_user)
- end
+  end
 
- def followings
+  def followings
     # user = User.find(params[:user_id])
     @users = current_user.followings
- end
+  end
 
- def followers
+  def followers
     # user = User.find(params[:user_id])
     @users = current_user.followers
- end
+  end
 
- private
+  private
 
- def relationship_params
-  params.require(:relationship).permit(:followed_id,:follower_id)
- end
+  def relationship_params
+    params.require(:relationship).permit(:followed_id, :follower_id)
+  end
 end
