@@ -71,3 +71,6 @@ gem "refile-mini_magick"
 gem 'dotenv-rails'
 gem 'fastimage'
 gem 'active_storage_validations', '~> 0.8'
+group :production do
+  gem 'mysql2'
+end
