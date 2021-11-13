@@ -1,4 +1,9 @@
  @import 'homes';
+ @import 'favorites';
+ @import 'relationships';
+ @import 'submissions';
+ @import 'users';
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -58,4 +63,3 @@
     text-decoration: none;
     color: white;
   }
-
