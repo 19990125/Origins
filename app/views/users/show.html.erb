@@ -11,7 +11,7 @@
 
   <div class="container">
    <div class="row">
-     <% if @user.image_id? %>
+     <% if @user.icon_image? %>
      <%= attachment_image_tag @user, :image, width: "300", class:"icon" %>
      <% else %>
      <%= image_tag "virender-singh-hE0nmTffKtM-unsplash.jpg", class: 'icon' %>
@@ -29,7 +29,7 @@
    <div class="row2">
      <%= @user.introduction %>
    </div>
-    <% @submissions.each do |submission| %>
+    <% @user.submissions.each do |submission| %>
      <div class="row">
        <% submission.submission_images.each do |image| %>
         <%= link_to submission_path(submission.id) do %>
