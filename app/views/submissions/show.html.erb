@@ -4,7 +4,7 @@
     <tr>
      <% if @submission.user.image_id? %>
      <td class="local"><%= link_to user_path(@submission.user_id) do %>
-     <%= attachment_image_tag @submission.user, :image, size: "100x100", class:"icon" %>
+     <%= attachment_image_tag @submission.user, :icon_image, size: "100x100", class:"icon" %>
      <% end %></td>
      <% else %>
      <td><%= link_to user_path(@submission.user_id) do %>

@@ -6,7 +6,7 @@
    <% if @users.exists? %>
     <% @users.each do |user| %>
         <td><%= link_to user_path(user.id) do %>
-            <%= attachment_image_tag user, :image, size: "100x100", class:"icon",fallback: "virender-singh-hE0nmTffKtM-unsplash.jpg" %>
+            <%= attachment_image_tag user, :icon_image, size: "100x100", class:"icon",fallback: "virender-singh-hE0nmTffKtM-unsplash.jpg" %>
             <% end %></td>
         <td><%= link_to user_path(user.id) do %>
             <%= user.nick_name %>
