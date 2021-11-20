@@ -11,11 +11,7 @@
 
   <div class="container">
    <div class="row">
-     <% if @user.icon_image? %>
-     <%= attachment_image_tag @user, :image, width: "300", class:"icon" %>
-     <% else %>
-     <%= image_tag "virender-singh-hE0nmTffKtM-unsplash.jpg", class: 'icon' %>
-     <% end %>
+     <%= attachment_image_tag @user, :icon_image, width: "300", class:"icon", fallback:"virender-singh-hE0nmTffKtM-unsplash.jpg" %>
 
      <div class="name"><%= @user.nick_name %></div>
      <% if current_user.id == @user.id %>

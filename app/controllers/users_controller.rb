@@ -22,11 +22,12 @@ class UsersController < ApplicationController
     redirect_to user_path(@user.id)
   end
 
-  def unsubscribe; end
+  def unsubscribe
+  end
 
   private
 
   def user_params
-    params.require(:user).permit(:nick_name, :image, :email, :password, :introduction)
+    params.require(:user).permit(:nick_name, :icon_image, :email, :password, :introduction)
   end
 end
