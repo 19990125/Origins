@@ -11,7 +11,7 @@
 
   <div class="container">
    <div class="row">
-     <%= attachment_image_tag @user, :icon_image, width: "300", class:"icon", fallback:"virender-singh-hE0nmTffKtM-unsplash.jpg" %>
+     <%= attachment_image_tag @user, :icon_image, size: "300x300", class:"icon", fallback:"virender-singh-hE0nmTffKtM-unsplash.jpg" %>
 
      <div class="name"><%= @user.nick_name %></div>
      <% if current_user.id == @user.id %>
