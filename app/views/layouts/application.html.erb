@@ -5,11 +5,11 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-　　<% self_css_path = "/assets/"+controller.controller_path  %>
-    <%= stylesheet_link_tag self_css_path, :media => "all" %>
-
+　　<%# self_css_path = "/assets/"+controller.controller_path  %>
+    <%#= stylesheet_link_tag self_css_path, :media => "all" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" media="all" href="<%= asset_path(controller_path+'.css') %>" />
   </head>
 
   <header>
