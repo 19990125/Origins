@@ -9,35 +9,35 @@
     <%#= stylesheet_link_tag self_css_path, :media => "all" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" media="all" href="<%= asset_path(controller_path+'.css') %>" />
+    <!--<link rel="stylesheet" media="all" href="<%#= asset_path(controller_path+'.css') %>" />-->
   </head>
 
-  <header>
-   <% if user_signed_in? %>
-    <div class="container1">
-      <%= link_to 'Origins', homes_top_path, class:"logo" %></li>
-      <div class="row1">
-       <li class="item1"><%= link_to 'プロフィール', user_path(current_user.id),class:"link" %></li>
-       <li class="item2"><%= link_to '投稿一覧', submissions_path,class:"link" %></li>
-       <li class="item3"><%= link_to '投稿検索', submissions_search_path,class:"link" %></li>
-       <li class="item4"><%= link_to 'いいね', user_submissions_path(current_user.id),class:"link" %></li>
-       <li class="item5"><%= link_to 'ログアウト', destroy_user_session_path,method: :delete,class:"link" %></li>
-      </ul>
-    </div>
-   </nav>
-   <% else %>
-    <div class="container1">
-      <%= link_to 'Origins', homes_top_path, class:"logo" %></li>
-      <div class="row1">
-       <li class="item1"><%= link_to 'トップ', homes_top_path,class:"link" %></li>
-       <li class="item2"><%= link_to 'サインアップ', new_user_registration_path,class:"link" %></li>
-       <li class="item3"><%= link_to 'ログイン', new_user_session_path,class:"link" %></li>
-      </ul>
-    </div>
-   </nav>
-   <% end %>
-  </header>
-   <body class='<%= "#{controller.controller_name}_#{controller.action_name}" %>'>
+  <body class='<%= "#{controller.controller_name}_#{controller.action_name}" %>'>
+    <header>
+     <% if user_signed_in? %>
+      <div class="container1">
+        <%= link_to 'Origins', homes_top_path, class:"logo" %></li>
+        <div class="row1">
+         <li class="item1"><%= link_to 'プロフィール', user_path(current_user.id),class:"link" %></li>
+         <li class="item2"><%= link_to '投稿一覧', submissions_path,class:"link" %></li>
+         <li class="item3"><%= link_to '投稿検索', submissions_search_path,class:"link" %></li>
+         <li class="item4"><%= link_to 'いいね', user_submissions_path(current_user.id),class:"link" %></li>
+         <li class="item5"><%= link_to 'ログアウト', destroy_user_session_path,method: :delete,class:"link" %></li>
+        </ul>
+      </div>
+     </nav>
+     <% else %>
+      <div class="container1">
+        <%= link_to 'Origins', homes_top_path, class:"logo" %></li>
+        <div class="row1">
+         <li class="item1"><%= link_to 'トップ', homes_top_path,class:"link" %></li>
+         <li class="item2"><%= link_to 'サインアップ', new_user_registration_path,class:"link" %></li>
+         <li class="item3"><%= link_to 'ログイン', new_user_session_path,class:"link" %></li>
+        </ul>
+      </div>
+     </nav>
+     <% end %>
+    </header>
     <%= yield %>
    </body>
 </html>
