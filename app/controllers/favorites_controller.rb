@@ -3,14 +3,14 @@ class FavoritesController < ApplicationController
     submission = Submission.find(params[:submission_id])
     favorite = current_user.favorites.new(submission_id: submission.id)
     favorite.save
-    redirect_to submission_path(current_user.id)
+    redirect_to submissions_path
   end
 
   def destroy
     submission = Submission.find(params[:submission_id])
     favorite = current_user.favorites.find_by(submission_id: submission.id)
     favorite.destroy
-    redirect_to submission_path(current_user.id)
+    redirect_to submissions_path
   end
 
   def index

@@ -12,15 +12,20 @@
   <div class="container">
    <div class="row">
      <%= attachment_image_tag @user, :icon_image, size: "300x300", class:"icon", fallback:"virender-singh-hE0nmTffKtM-unsplash.jpg" %>
+     <div class="test">
+      <div class="w-100 pl-3">
+       <%= @user.nick_name %>
+       <% if current_user.id == @user.id %>
+        <%= link_to '変更', edit_user_path(@user.id), class: "user_edit" %>
+       <% end %>
+       <%= link_to "＋", submissions_new_path,class:"new_post" %>
+      </div>
+      <div class="w-100">
+       <ul class="list"><%= link_to "フォローリスト", user_followings_path(@user.id),class:"btn btn-secondary" %>:<%= @user.followings.count %></ul>
+       <ul class="list"><%= link_to "フォロワーリスト", user_followers_path(@user.id),class:"btn btn-secondary" %>:<%= @user.followers.count %></ul>
+      </div>
+     </div>
 
-     <div class="name"><%= @user.nick_name %></div>
-     <% if current_user.id == @user.id %>
-     <%= link_to '変更', edit_user_path(@user.id), class: "user_edit" %>
-     <% end %>
-     <%= link_to "＋", submissions_new_path,class:"new_post" %>
-
-     <ul class="list"><%= link_to "フォローリスト", user_followings_path(@user.id),class:"btn btn-secondary" %>:<%= @user.followings.count %></ul>
-     <ul class="list"><%= link_to "フォロワーリスト", user_followers_path(@user.id),class:"btn btn-secondary" %>:<%= @user.followers.count %></ul>
    </div>
    <div class="row2">
      <%= @user.introduction %>
@@ -39,5 +44,5 @@
        <% end %>
      </div>
     <% end %>
-  </div>
+ </div>
 </main>

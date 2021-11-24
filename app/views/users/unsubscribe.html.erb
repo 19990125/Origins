@@ -13,7 +13,7 @@
      <div class="row">
       <tr>
        <%= button_to "はい", homes_top_path, class:"btn btn-info btn-sm", method: :delete, data: {comfirm: "Are you sure?"} %>
-       <%= button_to "いいえ", user_path(current_user.id), class:"btn btn-info btn-sm", method: :delete, data: {comfirm: "Are you sure?"} %>
+       <%= button_to "いいえ", user_path(current_user.id), class:"btn btn-info btn-sm", data: {comfirm: "Are you sure?"} %>
       </tr>
      </div>
   </div>
