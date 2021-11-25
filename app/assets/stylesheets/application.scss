@@ -209,9 +209,16 @@
     justify-content: center;
   }
 
-  .row {
+  .container2 {
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    padding-bottom: 30px;
+  }
+
+  .introduction {
+    display: flex;
+    justify-content: start;
+    padding-bottom: 30px;
   }
 
   .icon {
@@ -233,7 +240,7 @@
     justify-content: center;
   }
 
-  .container {
+  .container2 {
     display: flex;
     justify-content: start;
     padding-bottom: 30px;
