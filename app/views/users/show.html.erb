@@ -18,7 +18,7 @@
        <% if current_user.id == @user.id %>
         <%= link_to '変更', edit_user_path(@user.id), class: "user_edit" %>
        <% end %>
-       <%= link_to "＋", submissions_new_path,class:"new_post" %>
+       <%= link_to "＋", new_submission_path, class:"new_post" %>
       </div>
       <div class="w-100">
        <ul class="list"><%= link_to "フォローリスト", user_followings_path(@user.id),class:"btn btn-secondary" %>:<%= @user.followings.count %></ul>
